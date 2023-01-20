@@ -4,7 +4,8 @@ ForkGeneric: it is a simple package which  helps you to fork two value.
 ## Exampple
 ```dart 
     // Simple example with random value  
-    const int MaxNumber = 6;
+    const int MaxNumber = 6; 
+    
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
        int value  =random.nextIntOfDigits(MaxNumber);
@@ -17,9 +18,11 @@ ForkGeneric: it is a simple package which  helps you to fork two value.
 
 ```dart 
     // Simple Example width http client
-    // Http Package used in this is example and imported as http 
+    // Http Package used in this is example and imported as http  
+    const String Api_Url = "https://jsonplaceholder.typicode.com";
+
     Future<ForkGeneric<Exception,Response>> fetchPosts() async{
-      final request  = await http.get(Uri.parse("${Api_URL}/posts"));
+      final request  = await http.get(Uri.parse("${Api_Url}/posts"));
       if (request.statusCode == HttpStatusCode.ok){
            return RightForkGeneric(request);   
       } 
