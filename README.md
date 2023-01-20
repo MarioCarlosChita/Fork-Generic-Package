@@ -17,8 +17,8 @@ ForkGeneric: it is a simple package which  helps you to fork two value.
 ```dart 
     // Simple Example width http client
     // Http Package used in this is example and imported as http 
-    Future<ForkGeneric<Exception,Response>> fetchPosts(){
-      final request  = http.get(Uri.parse("${Api_URL}/posts"));
+    Future<ForkGeneric<Exception,Response>> fetchPosts() async{
+      final request  = await http.get(Uri.parse("${Api_URL}/posts"));
       if (request.statusCode == HttpStatusCode.ok){
            return RightForkGeneric(request);   
       } 
