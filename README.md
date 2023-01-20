@@ -4,7 +4,6 @@ ForkGeneric: it is a simple package which  helps you to fork two value.
 ## Exampple
 ```dart 
     // Simple example with random value 
-
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
        int value  =random.nextIntOfDigits(6);
@@ -18,7 +17,6 @@ ForkGeneric: it is a simple package which  helps you to fork two value.
 ```dart 
     // Simple Example width http client
     // Http Package used in this is example and imported as http 
-
     Future<ForkGeneric<Exception,Response>> fetchPosts(){
       final request  = http.get(Uri.parse("${Api_URL}/posts"));
       if (request.statusCode == HttpStatusCode.ok){
