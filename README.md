@@ -1,8 +1,30 @@
 
 
-ForkGeneric: it is a simple package which  helps you to fork two different data
-## Features
+ForkGeneric: it is a simple package which  helps you to fork two different data.
+## Exampple
+```dart 
+    // Simple example with random value
+    ForkGeneric<String,int>  guessIt(){
+        Random  random = math.Random(); 
+        int value  =random.nextIntOfDigits(6);
+        if (value % 2  == 0)
+          return RightForkGeneric(value);
+        else
+          return LeftForkGeneric("Not an Even number");      
+    }
+```  
 
+```dart 
+    // Http Client Data
+    // Http Package used in this is example and imported as http
+    ForkGeneric<Exception,Response>  fetchPosts(){
+       final request  = http.get(Uri.parse("${Api_URL}/posts"));
+       if (request.statusCode == HttpStatusCode.ok){
+           return RightForkGeneric(request);   
+       } 
+       return  LeftForkGeneric(SocketExcption()); 
+    }
+``` 
 ## Getting started
 
 TODO: List prerequisites and provide or point to information on how to
