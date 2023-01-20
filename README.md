@@ -5,24 +5,24 @@ ForkGeneric: it is a simple package which  helps you to fork two different data.
 ```dart 
     // Simple example with random value
     ForkGeneric<String,int>  guessIt(){
-        Random  random = math.Random(); 
-        int value  =random.nextIntOfDigits(6);
-        if (value % 2  == 0)
-          return RightForkGeneric(value);
-        else
-          return LeftForkGeneric("Not an Even number");      
+       Random  random = math.Random(); 
+       int value  =random.nextIntOfDigits(6);
+       if (value % 2  == 0)
+         return RightForkGeneric(value);
+       else
+         return LeftForkGeneric("Not an Even number");      
     }
 ```  
 
 ```dart 
     // Http Client Data
     // Http Package used in this is example and imported as http
-    ForkGeneric<Exception,Response>  fetchPosts(){
-       final request  = http.get(Uri.parse("${Api_URL}/posts"));
-       if (request.statusCode == HttpStatusCode.ok){
+    Future<ForkGeneric<Exception,Response>> fetchPosts(){
+      final request  = http.get(Uri.parse("${Api_URL}/posts"));
+      if (request.statusCode == HttpStatusCode.ok){
            return RightForkGeneric(request);   
-       } 
-       return  LeftForkGeneric(SocketExcption()); 
+      } 
+      return  LeftForkGeneric(SocketExcption()); 
     }
 ``` 
 ## Getting started
