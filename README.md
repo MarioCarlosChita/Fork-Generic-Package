@@ -3,10 +3,11 @@
 ForkGeneric: it is a simple package which  helps you to fork two value.
 ## Exampple
 ```dart 
-    // Simple example with random value 
+    // Simple example with random value  
+    const int MaxNumber = 6;
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
-       int value  =random.nextIntOfDigits(6);
+       int value  =random.nextIntOfDigits(MaxNumber);
        if (value % 2  == 0)
          return RightForkGeneric(value);
        else
