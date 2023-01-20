@@ -3,7 +3,7 @@
 ForkGeneric: it is a simple package which  helps you to fork two value.
 
 ## How to Import on your Project
-To import the ForkGeneric in your project ,it is not available yet in pub.deb just move to your  pubspec.yaml file  and put this code : 
+To import the ForkGeneric in your project ,it is not available yet in pub.dev just move to your  pubspec.yaml file  and put this code : 
 
 ```yaml 
   dependencies:
