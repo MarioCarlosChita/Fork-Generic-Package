@@ -1,11 +1,23 @@
 
 
 ForkGeneric: it is a simple package which  helps you to fork two value.
-## Exampple
+
+## How to Import on your Project
+To import the ForkGeneric in your project ,it is not available yet in pub.deb just move to your  pubspec.yaml file  and put this code : 
+
+```yaml 
+  dependencies:
+    fork_generic:
+    git:
+      url: https://github.com/MarioCarlosChita/Fork-Generic-Package.git
+      ref: main # branch name
+```       
+
+## Example
 ```dart 
     // Simple example with random value  
     const int MaxNumber = 6; 
-    
+
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
        int value  =random.nextIntOfDigits(MaxNumber);
