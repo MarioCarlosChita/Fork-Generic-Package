@@ -1,10 +1,10 @@
 
 
-ForkGeneric: it is a simple package which  helps you to fork two different data.
+ForkGeneric: it is a simple package which  helps you to fork two value.
 ## Exampple
 ```dart 
     // Simple example with random value 
-    
+
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
        int value  =random.nextIntOfDigits(6);
