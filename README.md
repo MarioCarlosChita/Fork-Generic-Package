@@ -22,9 +22,20 @@ It´s verify it the return is no the right side;
       }     
      bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsRight();
      print(verifyDirection) => true;
+``` 
+
+### IsLeft()
+It´s verify it the return is no the left side; 
+```dart
+    ForkGeneric<String,bool> checkBalance(String userId){
+       return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
+      }     
+     bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsLeft();
+     print(verifyDirection) => false;
 ```
- 
-<!-- ###Example
+
+
+### Example 
 ```dart 
     // Simple example with random value  
     const int MaxNumber = 6; 
@@ -36,7 +47,7 @@ It´s verify it the return is no the right side;
        else
          return LeftForkGeneric("Not an Even number");      
     }
-```   -->
+```  
 
 ```dart 
     // Simple Example width http client
