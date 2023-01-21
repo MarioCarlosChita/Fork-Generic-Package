@@ -1,6 +1,6 @@
 
 
-ForkGeneric: it is a simple package which  helps you to fork two value.
+ForkGeneric: it is a simple package which  helps you to fork two value. 
 
 ## How to Import on your Project
 To import the ForkGeneric in your project ,it is not available yet in pub.dev just move to your  pubspec.yaml file  and put this code : 
@@ -12,7 +12,18 @@ To import the ForkGeneric in your project ,it is not available yet in pub.dev ju
       url: https://github.com/MarioCarlosChita/Fork-Generic-Package.git
       ref: main # branch name
 ```       
-
+## Methods Available  
+#### IsRight()
+It´s verify it the return is no the right side; 
+   ```dart
+    ForkGeneric<String,bool> checkBalance(String userId){
+       return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
+      }     
+     bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsRight();
+     print(verifyDirection) => true;
+    ```
+ 
+ 
 ## Example
 ```dart 
     // Simple example with random value  
