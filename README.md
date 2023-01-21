@@ -11,24 +11,23 @@ To import the ForkGeneric in your project ,it is not available yet in pub.dev ju
     git:
       url: https://github.com/MarioCarlosChita/Fork-Generic-Package.git
       ref: main # branch name
-```       
+```    
+
 ## Methods Available  
-#### IsRight()
+### IsRight()
 It´s verify it the return is no the right side; 
-   ```dart
+```dart
     ForkGeneric<String,bool> checkBalance(String userId){
        return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
       }     
      bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsRight();
      print(verifyDirection) => true;
-    ```
+```
  
- 
-## Example
+<!-- ###Example
 ```dart 
     // Simple example with random value  
     const int MaxNumber = 6; 
-
     ForkGeneric<String,int>  guessIt(){
        Random  random = math.Random(); 
        int value  =random.nextIntOfDigits(MaxNumber);
@@ -37,7 +36,7 @@ It´s verify it the return is no the right side;
        else
          return LeftForkGeneric("Not an Even number");      
     }
-```  
+```   -->
 
 ```dart 
     // Simple Example width http client
