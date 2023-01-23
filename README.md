@@ -109,4 +109,4 @@ It returns the both side  right and left, by this you can verify  verify the val
     }
 ```  
 ## Additional information 
-So as I said this is a simple package which makes fork of two values.
+So as I said this is a simple package which makes fork of two values it is still in developing. feel free to contribute , sugest. Thanks
