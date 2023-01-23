@@ -15,7 +15,7 @@ To import the ForkGeneric in your project ,it is not available yet in pub.dev ju
 
 ## Methods Available  
 ### isRight()
-It´s verify it the return is no the right side; 
+It´s verify it the return is on the right side; 
 ```dart
     ForkGeneric<String,bool> checkBalance(String userId){
        return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
@@ -25,7 +25,7 @@ It´s verify it the return is no the right side;
 ``` 
 
 ### isLeft()
-It´s verify it the return is no the left side; 
+It´s verify it the return is on the left side; 
 ```dart
     ForkGeneric<String,bool> checkBalance(String userId){
        return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
@@ -109,4 +109,4 @@ It returns the both side  right and left, by this you can verify  verify the val
     }
 ```  
 ## Additional information 
-So as I said this is a simple package which makes fork of two values it is still in developing. feel free to contribute , sugest. Thanks
+So as I said this is a simple package which makes fork of two values it is still in developing. feel free to contribute , sugest.Thanks
