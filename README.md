@@ -8,32 +8,55 @@ To import the ForkGeneric in your project ,it is not available yet in pub.dev ju
 ```yaml 
   dependencies:
     fork_generic:
-    git:
-      url: https://github.com/MarioCarlosChita/Fork-Generic-Package.git
-      ref: main # branch name
+      git:
+        url: https://github.com/MarioCarlosChita/Fork-Generic-Package.git
+        ref: main # branch name
 ```    
 
 ## Methods Available  
-### IsRight()
+### isRight()
 It´s verify it the return is no the right side; 
 ```dart
     ForkGeneric<String,bool> checkBalance(String userId){
        return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
       }     
-     bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsRight();
+     bool  verifyDirection =   checkBalance("32322ASASauser@Key").isRight();
      print(verifyDirection) => true;
 ``` 
 
-### IsLeft()
+### isLeft()
 It´s verify it the return is no the left side; 
 ```dart
     ForkGeneric<String,bool> checkBalance(String userId){
        return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
-      }     
-     bool  verifyDirection =   checkBalance("32322ASASauser@Key").IsLeft();
-     print(verifyDirection) => false;
+    }     
+    bool  verifyDirection =   checkBalance("32322ASASauser@Key").isLeft();
+    print(verifyDirection) => false;
 ```
 
+
+### fold()  
+It returns the both side  right and left, by this you can verify  verify the values on the side.
+
+
+```dart
+    ForkGeneric<String,bool> checkBalance(String userId){
+       return  userId.contains("@key") ? RightForkGeneric(true): LeftForkGeneric("Has the key")
+    }  
+
+  void main(){
+      checkBalance("32322ASASauser@Key".fold(
+        (left){
+           print("left data");
+           print(left);
+        } ,
+        (right){ 
+           print("right data");
+           print(left);
+        }
+      );    
+  }     
+```
 
 ### Example 
 ```dart 
@@ -46,7 +69,18 @@ It´s verify it the return is no the left side;
          return RightForkGeneric(value);
        else
          return LeftForkGeneric("Not an Even number");      
-    }
+    }  
+  
+  void main(){
+       guessIt().fold(
+          (left){
+             print(left)
+          },
+          (right){
+            print(right);
+          }
+       )    
+  } 
 ```  
 
 ```dart 
@@ -61,23 +95,18 @@ It´s verify it the return is no the left side;
       } 
       return  LeftForkGeneric(SocketExcption()); 
     }
-``` 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+    void main(){
+       fetchPosts().fold(
+          (left){
+             print(left)
+          },
+          (right){
+            print(right);
+          }
+       )   
+    }
+```  
+## Additional information 
+So as I said this is a simple package which makes fork of two values.
